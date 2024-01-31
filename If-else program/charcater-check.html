@@ -8,10 +8,10 @@
 <body>
     <script>
         let char = prompt("enter value");
-        console.log(typeof(char));
-        if(typeof(char)==='string'){
+
+        if((char>='a'&& char<='z') ||(char>='A'&& char<='Z') ){
             alert(`The entered value is a string`);
-        }else if(typeof(char)==='number'){
+        }else if(char>='0' && char<='9'){
             alert("the entered value is a number");
         }else{
             alert("the entered value is a special character");
