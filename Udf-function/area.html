@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<body>
+    <script>
+        let rec = (l,w)=>{
+            return l*w;
+        }
+        let trai = (b,h)=>{
+            return 0.5*(b*h);
+        }
+        let cir = (r)=>{
+            let pi = 3.14;
+            return pi*r*r;
+        }
+        
+        let l = parseInt(prompt("Enter length"));
+        let w = parseInt(prompt("Enter Width"));
+        document.write("<br>Area of Rectangle is :"+ rec(l,w));
+
+        let b = parseInt(prompt("Enter base"));
+        let h = parseInt(prompt("Enter height"));
+        document.write("<br>Area of Traingle is :"+ trai(b,h));
+
+        let r = parseInt(prompt("Enter radious"));
+        document.write("<br>Area of Circle is :"+ cir(r));
+
+
+    </script>
+</body>
+</html>

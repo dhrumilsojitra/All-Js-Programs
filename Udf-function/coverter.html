@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<body>
+    <script>
+        let foot = (m)=>{
+            return m*3.28084;
+        }
+        let faranhit = (c)=>{
+            return c*(9/5)+32;
+        }
+        let dollar = (d)=>{
+            return d*83;
+        }
+        
+        let m = parseFloat(prompt("Enter meeter"));
+        document.write("<br>Meeter to feet is :"+ foot(m));
+
+        let c = parseInt(prompt("Enter Celcious"));
+        document.write("<br>Celciuos to faranhit is :"+ faranhit(c));
+
+        let d = parseInt(prompt("Enter dollar"));
+        document.write("<br>Dollar to inr is :"+ dollar(d));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<body>
+    <script>
+        let add = (a,b)=>{
+            return a+b;
+        }
+        let mul = (a,b)=>{
+            return a*b;
+        }
+        let sub = (a,b)=>{
+            return a-b;
+        }
+        let div = (a,b)=>{
+            return a/b;
+        }
+        let a = parseInt(prompt("value of a"));
+        let b = parseInt(prompt("value of b"));
+
+        document.write("<br>addition is :"+ add(a,b));
+        document.write("<br>Multipication is :"+ mul(a,b));
+        document.write("<br>Substraction is :"+ sub(a,b));
+        document.write("<br>Division is :"+ div(a,b));
+
+    </script>
+</body>
+</html>
