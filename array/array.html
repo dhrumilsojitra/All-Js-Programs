@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        // let a = parseInt(prompt("Enter numbers"));
+        // arr.push(a);
+        
+        let b = parseInt(prompt("enter array length"));
+        for (let i = 0; i < b ; i++) {
+            
+            let a = parseInt(prompt("Enter numbers"));
+            arr.push(a);
+            document.write("<br>"+arr[i]);
+        }
+
+        document.write("<br>----------------delete desire position elemnt") ;
+        let c = parseInt(prompt("which number do you want to remove?")) - 1;
+        let d = parseInt(prompt("How many elemnts deleted"));
+        let new_arry = [];
+        let new_arry_length = parseInt(prompt("enter new array length"));
+        document.write("<br>----------------new array item") ;
+        for (let i = 0; i < new_arry_length ; i++) {
+            
+            let a = parseInt(prompt("Enter numbers"));
+            new_arry.push(a);
+            document.write("<br>"+new_arry[i]);
+        }
+        let e = new_arry.concat(arr);
+        arr.splice(c,d,e);
+        document.write("<br>----------------after joining two array") ;
+        for (let j = 0; j < e.length; j++) {
+            
+            console.log("<br>"+e[j]);
+            
+        }
+    </script>
+</body>
+</html>
