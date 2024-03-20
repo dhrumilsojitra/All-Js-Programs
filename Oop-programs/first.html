@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    -----------------5th program ------------<br />
+    <input type="text" onkeyup="filterInput()" id="alp" /><br />
+    <script>
+      function filterInput() {
+        let input = document.getElementById("alp").value;
+        let filteredInput = "";
+
+        for (let i = 0; i < input.length; i++) {
+          let char = input[i];
+          if (isNaN(char)) {
+            filteredInput += char;
+          }
+        }
+
+        document.getElementById("alp").value = filteredInput;
+      }
+      let users = {
+        username: "Jay",
+        surname: "Ranpariya",
+        age: 38,
+        salary: 35000,
+        qualification: ["10th", "12th", "Bca", "Mca"],
+      };
+      //   second program to find how much key available
+      document.write(
+        "------------------------------1st program --------------------------------" +
+          "<br>"
+      );
+      let count = 0;
+      for (const user in users) {
+        document.write(user + "-----" + users[user] + "<br>");
+        count++;
+      }
+      // users.qualification.forEach((i) => {
+      //   document.write("Qualifiaction is " + i);
+      // });
+      document.write(
+        "------------------------------2nd program --------------------------------" +
+          "<br>"
+      );
+      document.write("total available key is " + count + "<br>");
+
+      //type of object access
+      let obj = {
+        name: "dhrumil",
+        surname: "sojitra",
+        age: 21,
+      };
+      document.write(
+        "------------------------------3rd program --------------------------------" +
+          "<br>"
+      );
+      document.write(obj.name + "<br>");
+      document.write(obj["surname"] + "<br>");
+      document.write(
+        "------------------------------4th program --------------------------------" +
+          "<br>"
+      );
+      class students {
+        constructor(name, age, subj1, subj2, subj3) {
+          this.name = name;
+          this.age = age;
+          this.subj1 = subj1;
+          this.subj2 = subj2;
+          this.subj3 = subj3;
+          this.marks = this.subj1 + this.subj2 + this.subj3;
+        }
+        averge() {
+          let avg = 0;
+          avg = this.marks / 3;
+          return avg;
+        }
+        display() {
+          let avg = this.averge();
+          document.write(
+            "name is = " +
+              this.name +
+              "<br>" +
+              "age =" +
+              this.age +
+              "<br>" +
+              "Total marks = " +
+              this.marks +
+              "<br>" +
+              "average marks = " +
+              avg
+          );
+        }
+      }
+
+      let std1 = new students("dhrumil", 20, 80, 85, 95);
+      std1.display();
+
+      document.write(
+        "<br>------------------------------6th program --------------------------------" +
+          "<br>"
+      );
+      function abc(a = 5, b = 10) {
+        return a + b;
+      }
+      document.write(abc());
+
+      document.write(
+        "<br>------------------------------7th program --------------------------------" +
+          "<br>"
+      );
+      class vehicle {
+        constructor(type, tire) {
+          (this.type = type), (this.tire = tire);
+        }
+        print() {
+          document.write(
+            "This vehicle type is " +
+              this.type +
+              " And tire is " +
+              this.tire +
+              "<br>"
+          );
+        }
+      }
+      let car = new vehicle("car", "four");
+      car.print();
+      let bus = new vehicle("bus", "four");
+      bus.print();
+      let truck = new vehicle("truck", "four");
+      truck.print();
+    </script>
+  </body>
+</html>
